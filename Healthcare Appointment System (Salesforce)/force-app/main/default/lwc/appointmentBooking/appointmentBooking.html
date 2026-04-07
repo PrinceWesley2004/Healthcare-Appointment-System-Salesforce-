@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Book Appointment">
+
+        <!-- Patient Dropdown -->
+        <lightning-combobox
+            label="Patient"
+            options={patientOptions}
+            onchange={handlePatient}>
+        </lightning-combobox>
+
+        <!-- Doctor Dropdown -->
+        <lightning-combobox
+            label="Doctor"
+            options={doctorOptions}
+            onchange={handleDoctor}>
+        </lightning-combobox>
+
+        <!-- Date -->
+        <lightning-input 
+            type="datetime" 
+            label="Appointment Date"
+            onchange={handleDate}>
+        </lightning-input>
+
+        <!-- Button -->
+        <lightning-button 
+            label="Book Appointment" 
+            variant="brand"
+            onclick={bookAppointment}>
+        </lightning-button>
+
+    </lightning-card>
+</template>
